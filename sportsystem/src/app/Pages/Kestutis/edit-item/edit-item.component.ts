@@ -36,8 +36,6 @@ export class EditItemComponent implements OnInit {
 
       this.service.deleteItemFromList(params['id']).subscribe(() => this.route.navigate(["/home"]))
     });
-
-
   }
 
 }

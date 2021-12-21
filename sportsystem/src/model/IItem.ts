@@ -4,7 +4,7 @@ export class IItem {
   picture = "";
   price = null;
   description = "";
-  quantity = null;
+  quantity = 0;
   discount = null;
   type = "";
 }

@@ -11,6 +11,7 @@ namespace SportSystemAPI.Data.Item
         Task SaveChangesAsync();
         Task<IEnumerable<ItemModel>> GetItemListAsync();
         Task<ItemModel> GetItemByIdAsync(int id);
+        Task<ItemModel> GetItemByNameAsync(string name);
         Task<List<ItemModel>> GetItemListByUserIdAsync(int userId);
         Task CreateItemAsync(ItemModel itemModel);
         Task UpdateItemAsync(ItemModel itemModel);

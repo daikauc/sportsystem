@@ -21,7 +21,10 @@ export class LoginComponent implements OnInit {
     phone: "",
     type: "guest",
     login: "Guest",
-    password: ""
+    password: "",
+    passport: "",
+    description: "",
+    balance: 0
   }
   prisijungta: string = "";
 

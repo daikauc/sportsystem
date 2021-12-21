@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ApiService } from './services/api-service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,12 @@ export class AppComponent {
   signout: boolean = false;
   addItem: boolean = false;
   username: string = ""
+
+  constructor(
+    private service: ApiService,
+    private activatedRoute: ActivatedRoute,
+    private route: Router
+  ) { }
 
   ngOnInit(): void {
     this.username = localStorage.getItem('username') || 'Guest';
@@ -40,5 +48,10 @@ export class AppComponent {
     this.guest = true;
     this.signout = false;
 
+  }
+
+  OpenUserEdit() {
+
+    this.route.navigate(["edit-account/" + localStorage.getItem('userId')]);
   }
 }

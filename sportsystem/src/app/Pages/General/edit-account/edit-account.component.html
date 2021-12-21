@@ -1,1 +1,60 @@
-<p>edit-account works!</p>
+<h1>Redaguoti profili</h1>
+
+<div class="register-form">
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Vardas</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.name">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Pavarde</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.lastname">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>E-pastas</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.email">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Tel. numeris</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.phone">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Prisijungimo vardas</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.login">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>G-pasas</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.passport">
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="legacy">
+      <mat-label>Aprasymas</mat-label>
+      <input matInput placeholder=" " [(ngModel)]="user.description">
+    </mat-form-field>
+  </p>
+
+  <div>
+    <button type="submit" class="btn btn-dark" (click)="updateUser()">Atnaujinti</button>
+  </div>
+  <br>
+
+
+
+
+</div>

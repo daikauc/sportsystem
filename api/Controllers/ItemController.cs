@@ -44,6 +44,18 @@ namespace SportSystemAPI.Controllers
             return Ok(itemFromRepo);
         }
 
+        // GET api/item/name{name}
+        [HttpGet("name/{name}")]
+        public async Task<ActionResult<ItemModel>> GetItemByNameAsync([FromRoute] string name)
+        {
+            var itemFromRepo = await _repository.GetItemByNameAsync(name);
+            if (itemFromRepo is null)
+            {
+                return NotFound();
+            }
+            return Ok(itemFromRepo);
+        }
+
         // GET api/item/{userId}
         [HttpGet("list/{userId}")]
         public async Task<ActionResult<List<ItemModel>>> GetItemListByUserIdAsync([FromRoute] int userId)

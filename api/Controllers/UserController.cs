@@ -31,9 +31,9 @@ namespace SportSystemAPI.Controllers
             return Ok(userList);
         }
 
-        /*
-        // GET api/user/{id}
-        [HttpGet("{id}")]
+
+        // GET api/user/id/{id}
+        [HttpGet("id/{id}")]
         public async Task<ActionResult<UserModel>> GetUserByIdAsync([FromRoute] int id)
         {
             var userFromRepo = await _repository.GetUserByIdAsync(id);
@@ -42,7 +42,7 @@ namespace SportSystemAPI.Controllers
                 return NotFound();
             }
             return Ok(userFromRepo);
-        }*/
+        }
 
         // GET api/user/{login}
         [HttpGet("{login}")]
@@ -78,7 +78,9 @@ namespace SportSystemAPI.Controllers
             model.Phone = userModel.Phone;
             model.Type = userModel.Type;
             model.Password = userModel.Password;
-
+            model.Passport = userModel.Passport;
+            model.Description = userModel.Description;
+            model.Balance = userModel.Balance;
 
             await _repository.UpdateUserAsync(model);
 

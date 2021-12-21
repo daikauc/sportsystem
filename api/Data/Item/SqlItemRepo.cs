@@ -34,6 +34,13 @@ namespace SportSystemAPI.Data.Item
             return item;
         }
 
+        public async Task<ItemModel> GetItemByNameAsync(string name)
+        {
+            ItemModel item = await _context.Items.FirstOrDefaultAsync(x => x.Name == name);
+
+            return item;
+        }
+
         public async Task<List<ItemModel>> GetItemListByUserIdAsync(int userId)
         {
             List<ItemModel> itemList = new List<ItemModel>();

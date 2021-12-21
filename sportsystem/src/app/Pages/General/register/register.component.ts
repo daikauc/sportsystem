@@ -31,7 +31,9 @@ export class RegisterComponent implements OnInit {
     if (user.password == this.confirmPass) {
       this.error = ""
       user.type = "user"
-
+      user.balance = 5
+      user.description = "Jusu aprasymas"
+      user.passport = "NEPATEIKTAS"
       user.password = this.EncrDecr.set('123456$#@$^@1ERF', user.password);
       var decrypted = this.EncrDecr.get('123456$#@$^@1ERF', user.password);
 

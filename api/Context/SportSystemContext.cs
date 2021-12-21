@@ -15,5 +15,6 @@ namespace SportSystemAPI.Context
         public DbSet<UserModel> Users { get; set; }
         public DbSet<WorkoutModel> Workouts { get; set; }
         public DbSet<WorkoutRegistrationModel> WorkoutRegistrations { get; set; }
+        public DbSet<SubModel> Subs { get; set; }
     }
 }

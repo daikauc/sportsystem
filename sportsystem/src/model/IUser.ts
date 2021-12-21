@@ -7,4 +7,7 @@ export class IUser {
   type = "";
   login = "";
   password = "";
+  passport = "";
+  description = "";
+  balance = 0;
 }

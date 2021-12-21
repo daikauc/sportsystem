@@ -7,6 +7,7 @@ import { ICart } from 'src/model/ICart';
 import { IUser } from 'src/model/IUser';
 import { IWorkout } from 'src/model/IWorkout';
 import { IWorkoutRegistration } from 'src/model/IWorkoutRegistration';
+import { ISub } from 'src/model/ISub';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,10 @@ export class ApiService {
 
   getItemById(id: number): Observable<IItem> {
     return this.http.get<IItem>(this.APIUrl + 'Item/' + id);
+  }
+
+  getItemByName(name: string): Observable<IItem> {
+    return this.http.get<IItem>(this.APIUrl + 'Item/name/' + name);
   }
 
   getItemListByUserId(userId: number): Observable<IItem[]> {
@@ -60,7 +65,6 @@ export class ApiService {
   deleteItemFromList(id: number) {
     return this.http.delete(this.APIUrl + 'Item/' + id);
   }
-
   addWorkout(workout: IWorkout) {
     return this.http.post(this.APIUrl + 'Workout', workout);
   }
@@ -95,5 +99,28 @@ export class ApiService {
 
   removeWorkoutRegistration(id: number) {
     return this.http.delete(this.APIUrl + 'WorkoutRegistration/' + id);
+  }
+  getUserById(id: number): Observable<IUser> {
+    return this.http.get<IUser>(this.APIUrl + 'User/id/' + id);
+  }
+
+  updateUser(user: IUser) {
+    return this.http.put(this.APIUrl + 'User', user);
+  }
+
+  getSubByUserId(userId: number): Observable<ISub> {
+    return this.http.get<ISub>(this.APIUrl + 'Sub/' + userId);
+  }
+
+  addSub(sub: ISub) {
+    return this.http.post(this.APIUrl + 'Sub', sub);
+  }
+
+  updateSub(sub: ISub) {
+    return this.http.put(this.APIUrl + 'Sub', sub);
+  }
+
+  deleteSub(userId: number) {
+    return this.http.delete(this.APIUrl + 'Sub/' + userId);
   }
 }

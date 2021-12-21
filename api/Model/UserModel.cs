@@ -13,6 +13,9 @@ namespace SportSystemAPI.Model
         public string Type { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
+        public string Passport { get; set; }
+        public string Description { get; set; }
+        public double Balance { get; set; }
 
     }
 }
