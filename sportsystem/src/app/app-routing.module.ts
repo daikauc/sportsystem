@@ -30,6 +30,7 @@ import { SubPauseComponent } from './Pages/Robertas/sub-pause/sub-pause.componen
 import { WorkoutComponent } from './Pages/Dainius/workout/workout.component';
 import { WorkoutDetailsComponent } from './Pages/Dainius/workout-details/workout-details.component';
 import { WorkoutRegisterComponent } from './Pages/Dainius/workout-register/workout-register.component';
+import { WorkoutRegisterWindowComponent } from './Pages/Dainius/workout-register-window/workout-register-window.component';
 import { WorkoutCalendarComponent } from './Pages/Dainius/workout-calendar/workout-calendar.component';
 
 import { HistoryComponent } from './history/history.component';
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: "workout", component: WorkoutComponent },
   { path: "workout-details", component: WorkoutDetailsComponent },
   { path: "workout-register", component: WorkoutRegisterComponent },
+  { path: "workout-register-window/:id", component: WorkoutRegisterWindowComponent },
   { path: "workout-calendar", component: WorkoutCalendarComponent },
   { path: "history", component: HistoryComponent },
 ];

@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </head>
-  
-  <body>
-    <div class="jumbotron text-center">
-      <h1>Treniruotės</h1>
-      <p>Iš čia galite užsiregistruoti į Jums patikusią treniruotę.</p>
+</head>
+<body>
+    <div class="workout-wrapper">
+        <h1 class="workout-title">
+            Treniruotės pavadinimas: {{workout?.name}}
+        </h1>
+        <p class="workout-desc">
+            Aprašymas: {{workout?.name}}
+        </p>
+        <p class="workout-desc">
+            Data: {{workout?.date}}
+        </p>
+        <p class="workout-desc">
+            Sudėtingumo lygis: {{workout?.diff}} %
+        </p>
+        <button type="submit" class="btn btn-dark" (click)="register()">Registruotis</button>
     </div>
-  
-  
-    <div class="container">
-        <div *ngFor="let workout of workoutList!" (click)="pushButton(workout.id)">
-          <div class="workout-item">
-            {{workout.name}}
-          </div>
-        </div>
-    </div>
-
-  </body>
+</body>

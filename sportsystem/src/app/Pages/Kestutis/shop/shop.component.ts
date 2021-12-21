@@ -39,5 +39,4 @@ export class ShopComponent implements OnInit {
     console.log(id);
     this.route.navigate(["item/" + id]);
   }
-
 }

@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { IItem } from 'src/model/IItem';
 import { ICart } from 'src/model/ICart';
 import { IUser } from 'src/model/IUser';
+import { IWorkout } from 'src/model/IWorkout';
+import { IWorkoutRegistration } from 'src/model/IWorkoutRegistration';
 
 @Injectable({
   providedIn: 'root'
@@ -59,4 +61,39 @@ export class ApiService {
     return this.http.delete(this.APIUrl + 'Item/' + id);
   }
 
+  addWorkout(workout: IWorkout) {
+    return this.http.post(this.APIUrl + 'Workout', workout);
+  }
+
+  updateWorkout(workout: IWorkout) {
+    return this.http.put(this.APIUrl + 'Workout', workout);
+  }
+
+  deleteWorkoutFromList(id: number) {
+    return this.http.delete(this.APIUrl + 'Workout/' + id);
+  }
+
+  getWorkoutList(): Observable<IWorkout[]> {
+    return this.http.get<IWorkout[]>(this.APIUrl + 'Workout');
+  }
+
+  getMyWorkoutList(id: number): Observable<IWorkout[]> {
+    return this.http.get<IWorkout[]>(this.APIUrl + 'WorkoutRegistration/' + id + '/0');
+  }
+
+  getWorkoutById(id: number): Observable<IWorkout> {
+    return this.http.get<IWorkout>(this.APIUrl + 'Workout/' + id);
+  }
+
+  addWorkoutRegistration(userId: number, workoutId: number) {
+    let params:IWorkoutRegistration = new IWorkoutRegistration()
+    params.id = 0
+    params.userId = userId
+    params.workoutId = workoutId
+    return this.http.post(this.APIUrl + 'WorkoutRegistration', params);
+  }
+
+  removeWorkoutRegistration(id: number) {
+    return this.http.delete(this.APIUrl + 'WorkoutRegistration/' + id);
+  }
 }

@@ -1,0 +1,17 @@
+.workout-title{
+    text-align: center;
+    font-size: 50px;
+}
+
+.workout-desc{
+    text-align: center;
+    font-size: 25px;
+}
+
+.workout-wrapper {
+    background-color: rgb(202, 202, 202);
+    width:auto;
+    margin:auto;
+    padding: 20px;
+    text-align: center;
+}

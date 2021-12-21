@@ -52,6 +52,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { WorkoutRegisterWindowComponent } from './Pages/Dainius/workout-register-window/workout-register-window.component';
 
 
 @NgModule({
@@ -78,9 +79,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     WorkoutComponent,
     WorkoutDetailsComponent,
     WorkoutRegisterComponent,
+    WorkoutRegisterWindowComponent,
     WorkoutCalendarComponent,
     HistoryComponent,
-    EditItemComponent
+    EditItemComponent,
+    WorkoutRegisterWindowComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportSystemAPI.Context;
 
@@ -11,9 +12,10 @@ using SportSystemAPI.Context;
 namespace SportSystemAPI.Migrations
 {
     [DbContext(typeof(SportSystemContext))]
-    partial class SportSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20211219144018_Workouts")]
+    partial class Workouts
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -162,25 +164,6 @@ namespace SportSystemAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Workouts");
-                });
-
-            modelBuilder.Entity("SportSystemAPI.Model.WorkoutRegistrationModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("WorkoutId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("WorkoutRegistrations");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,20 @@
+.workout-item {
+    background-color: rgb(233, 233, 233);
+    border: black;
+    border-radius: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+.workout-item:hover {
+    padding: 12px;
+    background-color:rgb(255, 255, 148);
+    transition-duration: 0.2s;
+}

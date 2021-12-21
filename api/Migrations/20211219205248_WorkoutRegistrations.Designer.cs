@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportSystemAPI.Context;
 
@@ -11,9 +12,10 @@ using SportSystemAPI.Context;
 namespace SportSystemAPI.Migrations
 {
     [DbContext(typeof(SportSystemContext))]
-    partial class SportSystemContextModelSnapshot : ModelSnapshot
+    [Migration("20211219205248_WorkoutRegistrations")]
+    partial class WorkoutRegistrations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

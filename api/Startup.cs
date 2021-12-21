@@ -9,6 +9,8 @@ using SportSystemAPI.Context;
 using SportSystemAPI.Data.Item;
 using SportSystemAPI.Data.User;
 using SportSystemAPI.Data.Cart;
+using SportSystemAPI.Data.Workout;
+using SportSystemAPI.Data.WorkoutRegistration;
 
 namespace SportSystemAPI
 {
@@ -37,6 +39,8 @@ namespace SportSystemAPI
             services.AddScoped<IItemRepo, SqlItemRepo>();
             services.AddScoped<ICartRepo, SqlCartRepo>();
             services.AddScoped<IUserRepo, SqlUserRepo>();
+            services.AddScoped<IWorkoutRepo, SqlWorkoutRepo>();
+            services.AddScoped<IWorkoutRegistrationRepo, SqlWorkoutRegistrationRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
